@@ -1,0 +1,32 @@
+/*Programa 6: construir um programa em Java que leia a quantidade de alunos do sexo
+masculino, do sexo feminino e a quantidade de alunos aprovados de uma turma e calcule,
+armazene e imprima o total de alunos e a porcentagem de alunos do sexo masculino, do sexo
+feminino e a porcentagem de alunos aprovados.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa08 {
+public static void main(String[] args) {
+int nM,nF,nA,total;
+float porcM,porcF,porcA;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite a quantidade de homens: ");
+nM = leia.nextInt();
+System.out.print("Digite a quantidade de mulheres: ");
+nF = leia.nextInt();
+System.out.print("Digite a quantidade de alunos aprovados");
+nA = leia.nextInt();
+total = nM + nF;
+tot = total/100;
+porcM = nM/tot;
+porcF = nF/tot;
+porca = nA/tot;
+System.out.println("A porcentagem de alunos aprovados é:
+"+porcM);
+System.out.println("A porcentagem de alunas aprovadas é"+
+porcF);
+System.out.println("A porcentagem de alunos e alunas aprovados
+é: "+ porcA);
+}

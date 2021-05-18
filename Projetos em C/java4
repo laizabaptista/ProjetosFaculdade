@@ -1,0 +1,20 @@
+/*Programa 4: construir um programa em Java que
+leia o salário bruto de um funcionário e calcule,
+armazene e imprima o salário bruto, um desconto de
+8% e o salário líquido..*/
+
+package controle;
+import java.util.Scanner;
+public class Programa04 {
+public static void main(String[] args) {
+float salarioB;
+float salarioL;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite o salario bruto: ");
+salarioB = leia.nextFloat();
+salarioL = salarioB*0.92;
+System.out.println("O salário Liquido é "+ salarioL);
+}
+}

@@ -1,0 +1,127 @@
+#!/bin/bash
+	## Universidade do Grande Rio
+	## TRABALHO DE SISTEMAS OPERACIONAIS ABERTOS
+	## Aluna: Laiza Souza
+
+cabecalho
+function agenda(){
+	clear
+	echo "**************************************************"
+	echo "**	       AGENDA TELEFONICA	     	**"
+	echo "**************************************************"
+	echo "	1) Criar agenda"
+	echo "	2) Editar agenda"
+	echo "	3) Listar agenda completa"
+	echo "	4) Sair do programa"
+	echo -ne "\nSelecione uma opÃ§Ã£o: "
+	read opcao;
+
+	while [[ "$opcao" != [1-4] ]]					
+	do
+		echo -n "OpÃ§Ã£o invÃ¡lida! Digite novamente: "		
+		read opcao
+	done
+
+	case $opcao in			
+		1)
+			echo -n "Criando agenda..."
+			sleep 2	
+			if [ ! -e /home/$USER/Agenda ]; then							
+				touch /home/$USER/Agenda;							 ARQUIVO					
+				echo -e "\nAgenda criada com sucesso em /home/$USER/Agenda !";
+			else
+				echo -e "\nVocáº½ jÃ¡ tem uma agenda!";
+			fi
+			;;
+		2)	
+			if [ -e "/home/$USER/Agenda" ]; then						
+			clear
+			echo -e "Editando agenda\n"												
+			echo "	1) Adicionar contato"
+			echo "	2) Remover contato"
+			echo "	3) Procurar contato"
+			echo "  4) Procurar por mÃªs de aniversÃ¡rio"
+			echo "  5) Exibir Lista"
+			echo -ne "\nSelecione uma opÃ§Ã£o: "
+			read resp
+	
+			while [[ "$resp" != [1-4] ]]									
+			do
+				echo -n "OpÃ§Ã£o invÃ¡lida! Digite novamente: "
+				read resp
+			done
+
+			case $resp in				
+				1)
+				echo -ne "\nDigite o nome e sobrenome do contato para adicionar: "
+				read nome
+				echo -n "Digite o nÃºmero de telefone do contato: "
+				read numero
+				echo -n "Digite o e-mail:"
+				read email
+				echo -n "Mes de nascimento:"
+				read mes
+				echo "Nome: $nome :: Telefone: $numero ::  E-mail: $email :: Mes de nascimento: $mes" >> /home/$USER/Agenda			
+				echo "Contato adicionado com sucesso!"		
+				;;
+
+				2)
+				echo -ne "\nDigite o nome do contato para remover: "
+				read nome
+				grep -v $nome /home/$USER/Agenda > /home/$USER/novaAgenda			
+				mv /home/$USER/novaAgenda /home/$USER/Agenda					
+				echo "Contato removido com sucesso!"		
+				;;
+
+				3) cat /home/$USER/Agenda
+										
+				;;
+				
+				4)
+				echo "Digite o mes:"
+				read mesproc
+				$ ls /home/$user/Agenda*$mesproc
+				;;
+
+				5) cat /home/$USER/Agenda
+				agenda
+				;;
+			5)
+				menu
+				;;
+			esac					
+	
+			else
+				echo -e "\nAgenda nÃ£o existe!\n";
+			fi
+			;;
+
+		3)
+			cat /home/$USER/Agenda					
+			;;
+		4) 
+			menu;;
+		5)
+			exit;;
+	esac				
+
+	echo "------------------------------------------------------------"
+	echo "	1) Voltar para o menu da agenda"
+	echo "	2) Sair do programa"
+	echo -n "Selecione uma opÃ§Ã£o: "
+	read resp;
+	while [[ "$resp" != [1-2] ]]								##ENQUANTO NÃƒO FOR UMA DAS OPÃ‡Ã•ES, REPETE
+	do
+		echo -n "OpÃ§Ã£o invÃ¡lida! Digite novamente: "
+		read resp
+	done
+
+		case $resp in
+			1)
+				agenda;;
+
+			2)
+				exit;;
+		esac
+}
+agenda

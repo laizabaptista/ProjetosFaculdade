@@ -1,0 +1,25 @@
+/*Programa 5: construir um programa em Java que
+leia os valores de A, B e C e calcule, armazene e
+imprima o valor do delta. D = B 2 - 4*A*C.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa05 {
+public static void main(String[] args) {
+int A,B,C,BR;
+float D,A1;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite o valor de A: ");
+A = leia.nextInt();
+System.out.print("Digite o valor de B: ");
+B = leia.nextInt();
+System.out.print("Digite o valor de C: ");
+C = leia.nextInt();
+BR = B*B;
+A1 = 4*A;
+D = BR - (A1*C) ;
+System.out.println("Delta é: "+ D);
+}
+}

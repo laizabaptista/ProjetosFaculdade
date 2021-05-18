@@ -1,0 +1,23 @@
+//Programa 1: Construir um programa em C que leia o preço de 10 produtos. Tendo os preços
+//armazenados, o programa deve atualizá-los em 15% e imprimir o vetor.
+
+#include<stdio.h>
+
+main(){
+ float preco[10];
+ int indice;
+
+    for(indice=0;indice<10;indice++){
+        printf("\nDigite o preco do produto %d:",indice+1);
+        scanf("%f",&preco[indice]);
+    }
+    for(indice=0;indice<10;indice++){
+        preco[indice]=preco[indice]*1.15;
+    }
+    for(indice=0;indice<10;indice++){
+        printf("\nO preco do [%d]= %.2f",indice, preco[indice]);
+
+    }
+
+getch();
+}

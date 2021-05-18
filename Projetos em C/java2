@@ -1,0 +1,26 @@
+/*Programa 2: construir um programa em Java que
+leia 2 números inteiros e calcule, armazene e imprima
+a média aritmética e a metade da diferença entre eles.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa02 {
+public static void main(String[] args) {
+int n1,n2,dif;
+float resultA,resultB;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite o primeiro numero: ");
+n1 = leia.nextInt();
+System.out.print("Digite o segundo numero: ");
+n2 = leia.nextInt();
+resultA = (n1+n2) / 2;
+dif =(n1 > n2)? n1 - n2 : n2 - n1;
+resultB = dif / 2;
+System.out.println("A média aritmética é: "+ resultA);
+System.out.println("A diferença entre eles é:"+ dif);
+System.out.println("A metade da diferença entre eles: "+
+resultB);
+}
+}

@@ -1,0 +1,21 @@
+/*Programa 1: construir um programa em Java que
+leia um número inteiro e calcule e escreva o seu
+dobro.*/
+
+package controle;
+
+import java.util.Scanner;
+
+public class Programa01 {
+public static void main(String[] args) {
+int numero;
+float result;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite um numero: ");
+numero = leia.nextInt();
+result = numero * 2;
+System.out.print("O resultado é: "+ result);
+}
+}

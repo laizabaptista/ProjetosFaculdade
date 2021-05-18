@@ -1,0 +1,32 @@
+/*Programa 9: construir um programa em Java que leia a quantidade de mini-games,
+calculadoras e canetas vendidas por um camelô ao fim de um dia e calcule, armazene e
+imprima o faturamento de cada produto e o faturamento total. Mini-games: R$ 6.95,
+calculadoras: R$ 3.50 e canetas: R$ 1.20.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa09 {
+public static void main(String[] args) {
+int qMinigames,qCalculadora,qCaneta;
+float minigames = 6.95,calculadoras=3.50 ,canetas =
+1.20,total1,total2,total3,totalF;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite a quantidade de minigames vendidos: ");
+qMinigames = leia.nextInt();
+System.out.print("Digite a quantidade de calculadoras vendidas:
+");
+qCalculadora = leia.nextInt();
+System.out.print("Digite a quantidade de canetas vendidas: ");
+qCaneta = leia.nextInt();
+total1= qMinigames*minigames;
+total2= qCalculadora*calculadoras;
+total3= qCanetas*canetas
+System.out.println("O faturamento dos minigames foi "+total1);
+System.out.println("O faturamento das calculadoras foi
+"+total2);
+System.out.println("O faturamento dos canetas foi "+total3);
+System.out.println("O faturamento total do dia foi"+totalF);
+}
+}

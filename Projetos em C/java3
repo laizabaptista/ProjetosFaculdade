@@ -1,0 +1,23 @@
+/*Programa 3: construir um programa em Java que
+leia as 3 notas de um aluno e calcule, armazene e
+imprima a média final.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa03 {
+public static void main(String[] args) {
+float n1,n2,n3;
+float resultado;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite a primeira nota: ");
+n1 = leia.nextFloat();
+System.out.print("Digite a segunda nota: ");
+n2 = leia.nextFloat();
+System.out.print("Digite a terceira nota: ");
+n3 = leia.nextFloat();
+resultado = (n1+n2+n3)/3;
+System.out.println("A media final é: "+ resultado);
+}
+}

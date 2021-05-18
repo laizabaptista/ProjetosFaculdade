@@ -1,0 +1,33 @@
+/*Programa 10: construir um programa em Java que leia a quantidade de vitórias, derrotas e
+empates de um time ao final de um campeonato e que calcule, armazene e imprima a
+quantidade total de jogos, a quantidade de pontos disputados, de pontos ganhos e pontos
+perdidos. Vitória: 3 pontos, empate: 1 ponto e derrota: 0 ponto.*/
+
+package controle;
+import java.util.Scanner;
+public class Programa09 {
+public static void main(String[] args) {
+int vitorias,derrotas,empates,totalJogos,pontosD,pontosP;
+int vit,der,emp,totalpontos;
+/* Scanner leia;
+leia = new Scanner(System.in); */
+Scanner leia = new Scanner(System.in);
+System.out.print("Digite a quantidade de vitorias: ");
+vitorias = leia.nextInt();
+System.out.print("Digite a quantidade de empates: ");
+empates = leia.nextInt();
+System.out.print("Digite a quantidade de derrotas ");
+derrotas = leia.nextInt();
+totalJogos = vitorias+derrotas+empates;
+vit = vitoria*3;
+der = derrotas*0;
+emp = empate*1;
+totalpontos = vit+der+emp;
+pontosD=totalJogos*3;
+pontosP=pontosD-totalpontos;
+System.out.println("Quantidade total de jogos: "+totaljogos);
+System.out.println("Pontos Disputados: "+ pontosD);
+System.out.println("Pontos Ganhos: "+ totalpontos);
+System.out.println("Pontos perdidos: "+ pontosP);
+}
+}

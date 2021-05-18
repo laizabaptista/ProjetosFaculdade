@@ -1,0 +1,19 @@
+#include <stdio.h>
+main(){
+int idade,contador=0;
+float alt,soma=0,resultado;
+while(idade>=0) {
+printf("Digite a idade: ");
+scanf("&d",&idade);
+printf("Digite a Altura: ");
+scanf("&d",&alt);
+if (idade>=50)
+{
+contador++;
+soma+=alt;
+}
+}
+resultado=alt/contador;
+printf("A media de altura das pessoas maiores de 50 anos eh %f",resultado);
+getch();
+}
